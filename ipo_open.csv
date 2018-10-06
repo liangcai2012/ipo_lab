@@ -239,12 +239,12 @@ date,symbol,ipo_price,open_price,pm,minutes,pem,shares,outstanding,leading_under
 20140131,MBUU,14.00,17.30,18.00,0,18.00,7142858,10155578,wells fargo,NASDAQ,,Capital Goods
 20111215,MCEP,18.00,17.75,17.85,9,17.85,5400000,17640000,rbc,NASDAQ,Basic Materials,Energy
 20150717,MCFT,15.00,15.50,15.80,5,15.80,6071429,17210426,wells fargo,NASDAQ,Consumer Goods,Capital Goods
-20101026,MCOX,11.00,17.50,18.50,0,18.50,11742857,401192254,credit suisse,NASDAQ,Services,Specialty Retail, Other
+20101026,MCOX,11.00,17.50,18.50,0,18.50,11742857,401192254,credit suisse,NASDAQ,Services,Specialty Retail Other
 20150626,MCRB,18.00,28.50,32.68,6,33.00,7430555,37834057,goldman sachs,NASDAQ,Healthcare,Health Care
 20140731,MCUR,10.00,9.00,9.00,0,9.00,5350000,16177296,credit suisse,NASDAQ,Healthcare,Biotechnology
 20140320,MDWD,14.00,16.00,17.40,4,17.40,5000000,20350586,credit suisse,NASDAQ,Healthcare,Consumer Durables
 20111209,MEMP,19.00,18.90,18.90,0,19.00,9000000,16061294,citigroup,NASDAQ,Basic Materials,Independent Oil & Gas
-20111118,MFRM,19.00,22.00,22.50,3,22.50,5555555,32983602,william blair,NASDAQ,Services,Specialty Retail, Other
+20111118,MFRM,19.00,22.00,22.50,3,22.50,5555555,32983602,william blair,NASDAQ,Services,Specialty Retail Other
 20131010,MGNX,16.00,24.00,25.62,9,26.40,5000000,24021725,bofa merrill lynch,NASDAQ,Healthcare,Health Care
 20140627,MIK,17.00,17.00,17.14,0,17.16,27777778,203103839,goldman sachs,NASDAQ,Services,Consumer Services
 20130517,MKTO,13.00,20.00,20.42,6,20.42,6059509,35784149,credit suisse,NASDAQ,Technology,Application Software
@@ -515,7 +515,7 @@ date,symbol,ipo_price,open_price,pm,minutes,pem,shares,outstanding,leading_under
 20110729,CJES,29.00,30.00,31.00,0,31.00,11500000,51886574,goldman sachs,NYSE,Basic Materials,Oil & Gas Equipment & Services
 20140508,CMCM,14.00,15.25,15.89,10,16.43,12000000,12000000,credit suisse,NYSE,Technology,Technology
 20101104,CMRE,12.00,12.00,12.12,1,12.12,13300000,60300000,morgan stanley,NYSE,Services,Transportation
-20120622,CNCO,15.61,15.61,15.62,1,16.39,15265783,N/A,jp morgan,NYSE,Services,Specialty Retail, Other
+20120622,CNCO,15.61,15.61,15.62,1,16.39,15265783,N/A,jp morgan,NYSE,Services,Specialty Retail Other
 20140925,CNNX,22.00,28.50,29.16,4,29.16,17500000,29163121,bofa merrill lynch,NYSE,Basic Materials,Oil & Gas Pipelines
 20150701,CNXC,15.00,15.00,15.48,7,15.61,5000000,11611067,bofa merrill lynch,NYSE,N/A,N/A
 20100923,COR,16.00,16.00,16.22,8,16.22,16900000,17109042,bofa merrill lynch,NYSE,Financial,Consumer Services
