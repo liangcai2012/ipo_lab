@@ -96,7 +96,7 @@ date,symbol,ipo_price,open_price,pm,minutes,pem,shares,outstanding,leading_under
 20130725,CNAT,11.00,11.00,11.24,0,11.24,6000000,15575485,piper jaffray,NASDAQ,Healthcare,Health Care
 20140213,CNCE,14.00,15.75,16.26,5,16.26,6000000,17218121,ubs,NASDAQ,Healthcare,Health Care
 20130212,CNOB,28.00,30.50,31.00,0,31.00,1600000,4752951,stifel nicolaus,NASDAQ,Financial,Finance
-20141120,CNV,7.00,7.63,7.88,3,7.88,26800000,438914952,morgan stanley,NASDAQ,Services,Specialty Retail, Other
+20141120,CNV,7.00,7.63,7.88,3,7.88,26800000,438914952,morgan stanley,NASDAQ,Services,Specialty Retail Other
 20150507,COLL,12.00,12.00,13.00,3,13.00,5800000,19707935,jefferies,NASDAQ,Healthcare,Health Care
 20131025,COMM,15.00,15.00,15.42,6,15.42,38461537,185653830,bofa merrill lynch,NASDAQ,Technology,Technology
 20130118,CONE,19.00,21.00,22.10,2,22.10,16500000,19413165,morgan stanley,NASDAQ,Financial,Consumer Services
