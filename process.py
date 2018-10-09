@@ -3,6 +3,21 @@ sys.path.insert(0, '..')
 import ipo_lab
 #import matplotlib.pyplot as plt
 
+def detect_overlap():
+    df= ipo_lab.load_data("./ipo_open.csv")
+    sdf = df.sort_values(by=['symbol'])
+    prev_sym = ""
+    for i, row in sdf.iterrows():
+        if prev_sym == "":
+            prev_sym = row["symbol"]
+        else:
+            if prev_sym == row["symbol"]:
+                print row["symbol"], i
+            prev_sym = row["symbol"]
+
+    
+
+
 def pop_by_hot(df, h_scope, p_scope):
     hot = []
     pop = []
@@ -55,7 +70,8 @@ def parse_uw():
 #data = ipo_lab.load_data("./ipo_open.csv")
 #h, p = pop_by_hot(data, 2, 3)
 
-parse_uw()
+#parse_uw()
+detect_overlap()
 
 
 
