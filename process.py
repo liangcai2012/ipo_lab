@@ -136,38 +136,6 @@ def svm(training_size, valve):
     print tt, tf, ft, ff, s, 'svm true rate:', (tt+ff)*1.0/s, 'random:', (tt+tf)*1.0/s, 'svm:', tt*1.0/(tt + ft) 
 
 
-def histo(col, n, valve, dt):
-    df = pd.read_csv('./ipo.csv')
-    num = len(df)/n 
-    if len(df)%n > 0:
-        num += 1
-    sdf = df.sort_values(by=['symbol'])
-    idx = -1
-    t = 0
-    f = 0
-    sec = 1 
-    xax = []
-    yax = []
-    for i, row in df.iterrows():
-        idx += 1
-        if idx > num * sec:
-            print t+f, t, row[col]
-            xax.append(row[col])
-            if dt> 0:
-                yax.append(t*1.0/(t+f))
-            else:
-                yax.append(f*1.0/(t+f))
-            t = 0
-            f = 0
-            sec += 1
-        if row["y"] > valve:
-            t += 1
-        else:
-            f += 1
-
-    print xax
-    print yax
-
 #data = ipo_lab.load_data("./ipo_open.csv")
 #h, p = pop_by_hot(data, 2, 3)
 
@@ -180,4 +148,6 @@ def histo(col, n, valve, dt):
 
 
 
-histo("x1", 15, 1.02, 1)
+x, y = ipo_lab.histo("x1", 15, 1.02, 1)
+print x
+print y
