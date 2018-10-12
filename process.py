@@ -148,6 +148,6 @@ def svm(training_size, valve):
 
 
 
-x, y = ipo_lab.histo("x1", 15, 1.02, 1)
+x, y = ipo_lab.histo('./ipo.csv', "x1", 15, 1.02, 1)
 print x
 print y

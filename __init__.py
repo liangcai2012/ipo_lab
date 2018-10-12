@@ -5,8 +5,8 @@ def load_data(path):
     sdf = df.sort_index()
     return sdf
 
-def histo(col, n, valve, dt):
-    df = pd.read_csv('./ipo.csv')
+def histo(path, col, n, valve, dt):
+    df = pd.read_csv(path)
     num = len(df)/n 
     if len(df)%n > 0:
         num += 1
