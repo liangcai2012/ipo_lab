@@ -1,6 +1,7 @@
 import sys
 sys.path.insert(0, '..')
 import ipo_lab
+import pandas as pd
 #import matplotlib.pyplot as plt
 
 def detect_overlap():
@@ -56,7 +57,6 @@ def distribution_pm(df, valve):
     return range(start_year, end_year+1), total, pm_over_valve
 
 def parse_uw():
-    import pandas as pd
     df = pd.read_csv('./ipo_uws.csv')
     uw_list = df["underwriter"]
     
@@ -65,13 +65,119 @@ def parse_uw():
     print len(uw_list)
     print len(uw_set)
 
+def filter_by_exch(valve):
+    df = pd.read_csv('./ipo.csv')
+    tt = tf = ff = ft = 0
+    no = 0
+    for i, row in df.iterrows():
+        no += 1
+        if no <= 0: 
+            continue
+       # if row["exchange"] == 1:
+        if row["x1"] > 1.1:
+            if row["y"] > valve:
+                tt += 1
+            else:
+                ft += 1
+        else:
+            if row["y"] > valve:
+                tf += 1
+            else:
+                ff += 1
+    s = tt+tf+ft+ff
+    print tt, tf, ft, ff, s, 'exchange filter true rate:', (tt+ff)*1.0/s, 'random:', (tt+tf)*1.0/s, 'svm:', tt*1.0/(tt + ft) 
 
+
+def svm(training_size, valve):
+    from sklearn import svm
+    df = pd.read_csv('./ipo.csv')
+
+    #training
+    x_train = []
+    y_train = []
+    no = 0
+    for i, row in df.iterrows():
+        no += 1
+        if no> training_size:
+            break
+        if row["y"]> valve:
+            y_train.append(1)
+        else:
+            y_train.append(0)
+#        x_train.append([row["x1"], row["x2"], row["x3"], row["x4"], row["exchange"]])
+        x_train.append([row["x1"]])
+#    print y_train
+#    print x_train
+    clf = svm.SVC(gamma='scale',kernel='rbf')
+    clf.fit(x_train, y_train)
+    print clf
+
+   #accuracy
+    no = 0
+    tt = tf = ff = ft = 0
+    for i, row in df.iterrows():
+        no += 1
+        if no <= training_size:
+            continue
+        #if(1 == clf.predict([[row["x1"], row["x2"], row["x3"], row["x4"], row["exchange"]]])[0]):
+        p = clf.predict([[row["x1"]]])
+#        print p
+        if 1 == p[0]:
+            if row["y"] > valve:
+                tt += 1
+            else:
+                ft += 1
+        else:
+            if row["y"] > valve:
+                tf += 1
+            else:
+                ff += 1
+    s = tt+tf+ft+ff
+    print tt, tf, ft, ff, s, 'svm true rate:', (tt+ff)*1.0/s, 'random:', (tt+tf)*1.0/s, 'svm:', tt*1.0/(tt + ft) 
+
+
+def histo(col, n, valve, dt):
+    df = pd.read_csv('./ipo.csv')
+    num = len(df)/n 
+    if len(df)%n > 0:
+        num += 1
+    sdf = df.sort_values(by=['symbol'])
+    idx = -1
+    t = 0
+    f = 0
+    sec = 1 
+    xax = []
+    yax = []
+    for i, row in df.iterrows():
+        idx += 1
+        if idx > num * sec:
+            print t+f, t, row[col]
+            xax.append(row[col])
+            if dt> 0:
+                yax.append(t*1.0/(t+f))
+            else:
+                yax.append(f*1.0/(t+f))
+            t = 0
+            f = 0
+            sec += 1
+        if row["y"] > valve:
+            t += 1
+        else:
+            f += 1
+
+    print xax
+    print yax
 
 #data = ipo_lab.load_data("./ipo_open.csv")
 #h, p = pop_by_hot(data, 2, 3)
 
 #parse_uw()
-detect_overlap()
+#detect_overlap()
+
+#v = 1.03
+#svm(700, v)
+#filter_by_exch(v)
 
 
 
+histo("x1", 15, 1.02, 1)
