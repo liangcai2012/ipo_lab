@@ -5,6 +5,7 @@ def load_data(path):
     sdf = df.sort_index()
     return sdf
 
+
 def histo(path, col, n, valve, dt):
     df = pd.read_csv(path)
     num = len(df)/n 
