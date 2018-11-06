@@ -640,7 +640,6 @@ date,symbol,ipo_price,open_price,pm,minutes,pem,shares,outstanding,leading_under
 20110511,KOS,18.00,19.50,19.70,0,19.70,33000000,374176471,credit suisse,NYSE,Basic Materials,Energy
 20140206,LADR,17.00,16.50,16.70,4,16.70,13250000,48614104,bofa merrill lynch,NYSE,Financial,Consumer Services
 20141211,LC,15.00,24.75,25.44,2,25.44,57700000,361111537,goldman sachs,NYSE,N/A,Miscellaneous
-20131016,LEAF,17.00,19.10,19.27,0,19.27,21045148,111631667,credit suisse,NYSE,Financial,Credit Services
 20140417,LEJU,10.00,10.80,10.95,0,10.95,10000000,10000000,credit suisse,NYSE,Financial,Finance
 20130606,LITB,9.50,11.16,12.50,9,12.50,8300000,8300000,credit suisse,NYSE,Services,Consumer Services
 20110519,LNKD,45.00,83.00,92.99,3,92.99,7840000,7840000,morgan stanley,NYSE,Technology,Internet Information Providers
@@ -872,7 +871,6 @@ date,symbol,ipo_price,open_price,pm,minutes,pem,shares,outstanding,leading_under
 20130917,ROIQU,10.00,10.00,10.02,0,10.02,12500000,15625000,deutsche bank,NASDAQ,,
 20140827,SMACU,10.00,10.00,10.07,3,10.07,4000000,5210000,cantor fitzgerald,NASDAQ,,
 20140716,TFSCU,10.00,10.00,10.01,4,10.01,4000000,5180000,earlybird,NASDAQ,,
-20140717,TRTLU,10.00,10.00,10.04,3,10.04,18500000,23125000,deutsche bank,NASDAQ,,
 20140606,WLRHU,10.00,10.08,10.14,0,10.14,43500000,54375000,bofa merrill lynch,NASDAQ,,
 20141212,FCAU,11.00,11.20,11.38,10,11.40,87000000,1271919505,goldman sachs,NYSE,N/A,Capital Goods
 20150805,RUN,14.00,13.06,13.31,1,13.31,17900000,96973895,credit suisse,NASDAQ,N/A,Capital Goods
@@ -1304,7 +1302,6 @@ date,symbol,ipo_price,open_price,pm,minutes,pem,shares,outstanding,leading_under
 20100805,AMBO,10.00,10.00,12.60,0,12.60,10677207,21354414,jp morgan,AMEX,,
 20161011,AHPAU,10.00,9.82,9.89,0,9.90,30000000,37500000,credit suisse,NASDAQ,,
 20160303,JSYNU,10.00,9.95,10.00,0,10.00,3900000,5169500,maxim,NASDAQ,,
-20150911,EAGLU,10.00,10.01,10.02,4,10.02,48000000,60000000,bofa merrill lynch,NASDAQ,,
 20110325,PACQU,10.00,10.00,10.05,1,10.05,3600000,4824000,chardan,NASDAQ,,
 20101007,STND,10.00,11.00,11.50,0,11.50,3450000,N/A,stifel nicolaus weisel,NASDAQ,,
 20170407,FMCIU,10.00,10.00,10.02,1,10.02,15000000,19455000,earlybird,NASDAQ,,
